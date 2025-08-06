@@ -1,32 +1,49 @@
-
-body {
-  background-image: url('https://makeone.com.br/wp-content/uploads/2023/12/Camada_1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Mensagens do usuário */
-.chat-message.user {
-  background-color: #2A1053;
-  color: white;
-  border-radius: 20px;
-  padding: 10px;
-  max-width: 80%;
-}
-
-/* Mensagens do atendente */
-.chat-message.agent {
-  background-color: #F1F1F1;
-  color: black;
-  border-radius: 20px;
-  padding: 10px;
-  max-width: 80%;
+# Novo conteúdo CSS ajustado com cores roxas e layout mais harmonizado para o chat MakeOne
+new_css_content = """
+/* Fundo principal do chat */
+body, .chat-container {
+  background-color: #2A1053 !important;
+  background-image: none !important;
 }
 
 /* Cabeçalho do chat */
 .chat-header {
-  background-color: #2A1053;
-  color: white;
+  background-color: #2A1053 !important;
+  color: white !important;
   font-weight: bold;
 }
+
+/* Mensagens do usuário (cliente) */
+.chat-message.user {
+  background-color: #fff;
+  color: #2A1053;
+  border-radius: 18px;
+  padding: 12px;
+  max-width: 80%;
+  font-weight: 500;
+}
+
+/* Mensagens do atendente (bot ou humano) */
+.chat-message.agent {
+  background-color: #F6F1FA;
+  color: #2A1053;
+  border-radius: 18px;
+  padding: 12px;
+  max-width: 80%;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Nome do atendente */
+.agent-name {
+  color: #ffffff;
+  font-weight: bold;
+}
+"""
+
+# Salvar novo arquivo CSS
+new_file_path = "/mnt/data/estilo-chat-makeone-v2.css"
+with open(new_file_path, "w") as f:
+    f.write(new_css_content)
+
+new_file_path
