@@ -1,68 +1,31 @@
-# CSS que replica exatamente o estilo do print fornecido
-css_preciso = """
-/* Fundo geral do chat */
-body, .chat-container {
-  background-color: #2A1053 !important; /* Roxo escuro MakeOne */
-  background-image: none !important;
-  font-family: 'Arial', sans-serif;
+body {
+  background-image: url('https://makeone.com.br/wp-content/uploads/2023/12/Camada_1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Mensagens do usuário */
+.chat-message.user {
+  background-color: #2A1053;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  max-width: 80%;
+}
+
+/* Mensagens do atendente */
+.chat-message.agent {
+  background-color: #F1F1F1;
+  color: black;
+  border-radius: 20px;
+  padding: 10px;
+  max-width: 80%;
 }
 
 /* Cabeçalho do chat */
 .chat-header {
-  background-color: #2A1053 !important;
-  color: white !important;
-  font-weight: bold;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
-/* Balões do usuário (mensagens do cliente) */
-.chat-message.user {
   background-color: #2A1053;
   color: white;
-  border-radius: 16px;
-  padding: 10px 14px;
-  margin: 4px 0;
-  max-width: 80%;
-  font-size: 14px;
-  line-height: 1.4;
-  align-self: flex-end;
-}
-
-/* Balões do agente (mensagens do atendente) */
-.chat-message.agent {
-  background-color: #E4EDF6;
-  color: #2A1053;
-  border-radius: 16px;
-  padding: 10px 14px;
-  margin: 4px 0;
-  max-width: 80%;
-  font-size: 14px;
-  line-height: 1.4;
-  align-self: flex-start;
-}
-
-/* Nome do agente */
-.agent-name {
-  color: #2A1053;
   font-weight: bold;
-  font-size: 13px;
-  margin-bottom: 2px;
 }
-
-/* Campo de mensagem */
-input, textarea, .chat-input {
-  border-radius: 30px !important;
-  border: 1px solid #ccc;
-  padding: 10px 16px;
-  font-size: 14px;
-  color: #333;
-}
-"""
-
-# Salvar como arquivo CSS para download e uso no GitHub
-precise_file_path = "/mnt/data/estilo-chat-makeone-final.css"
-with open(precise_file_path, "w") as f:
-    f.write(css_preciso)
-
-precise_file_path
