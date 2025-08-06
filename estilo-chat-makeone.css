@@ -1,0 +1,32 @@
+
+body {
+  background-image: url('https://makeone.com.br/wp-content/uploads/2023/12/Camada_1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Mensagens do usuário */
+.chat-message.user {
+  background-color: #2A1053;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  max-width: 80%;
+}
+
+/* Mensagens do atendente */
+.chat-message.agent {
+  background-color: #F1F1F1;
+  color: black;
+  border-radius: 20px;
+  padding: 10px;
+  max-width: 80%;
+}
+
+/* Cabeçalho do chat */
+.chat-header {
+  background-color: #2A1053;
+  color: white;
+  font-weight: bold;
+}
